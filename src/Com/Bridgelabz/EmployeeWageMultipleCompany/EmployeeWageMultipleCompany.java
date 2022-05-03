@@ -9,13 +9,12 @@ public class EmployeeWageMultipleCompany {
     private static final int FULL_DAY_HOUR = 10;
     private static final int TOTAL_WORKING_HOURS = 100;
     private static final int TOTAL_WORKING_DAYS = 20;
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee wage Computation Problem");
+     //UC7 Method to Compute wage
+    public static void wageCompute() {
         int dayCount = 1;
         int workingHours = 0;
         int totalWage = 0;
-        //UC6 calculating both condition of total wage and total hours
-        while (dayCount <= TOTAL_WORKING_DAYS && workingHours <= TOTAL_WORKING_HOURS){
+        while (dayCount <= TOTAL_WORKING_DAYS && workingHours <= TOTAL_WORKING_HOURS) {
             int dailyWage = 0;
             int empStatus = (int) (Math.random() * 10) % 3;
             switch (empStatus) {
@@ -36,5 +35,10 @@ public class EmployeeWageMultipleCompany {
             System.out.println("Daily Wage for day : " + dayCount + " is " + dailyWage);
             dayCount++;
         }
-        }
     }
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee wage Computation Problem");
+        wageCompute();
+    }
+}
