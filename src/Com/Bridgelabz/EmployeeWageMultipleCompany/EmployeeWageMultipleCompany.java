@@ -14,8 +14,8 @@ public class EmployeeWageMultipleCompany {
         int dayCount = 1;
         int workingHours = 0;
         int totalWage = 0;
-        //UC5 calculating wages per month
-        while (dayCount <= TOTAL_WORKING_DAYS ) {
+        //UC6 calculating both condition of total wage and total hours
+        while (dayCount <= TOTAL_WORKING_DAYS && workingHours <= TOTAL_WORKING_HOURS){
             int dailyWage = 0;
             int empStatus = (int) (Math.random() * 10) % 3;
             switch (empStatus) {
